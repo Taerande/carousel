@@ -12,18 +12,6 @@ class CircularDoublyLinkedList {
     this.current = null;
   }
 
-  next() {
-    if (!this.current) return;
-    this.current = this.current.next;
-    return this.current.url;
-  }
-
-  prev() {
-    if (!this.current) return;
-    this.current = this.current.prev;
-    return this.current.url;
-  }
-
   push(url) {
     const newNode = new Node(url);
 

@@ -1,10 +1,13 @@
 <template>
-  <div class="btn-panel">
-    <button @click="prevImage">Prev</button>
-    <button @click="nextImage">Next</button>
-    <button @click="playImage" :class="intervalId ? 'active' : ''">
-      {{ intervalId ? "Stop" : "Play" }}
-    </button>
+  <div class="container">
+    <div class="btn-panel">
+      <button @click="prevImage">Prev</button>
+      <button @click="nextImage">Next</button>
+      <button @click="playImage" :class="intervalId ? 'active' : ''">
+        {{ intervalId ? "Stop" : "Play" }}
+      </button>
+    </div>
+    <div>영국 > 흑인 > 산 > 맥주 > 골목 ></div>
   </div>
   <div class="img-container">
     <img v-if="carousel" :src="currentImageUrl" alt="" />
@@ -63,11 +66,13 @@ export default {
 };
 </script>
 <style scoped>
-.btn-panel {
+.container {
   position: absolute;
   left: 50%;
   top: 20px;
   transform: translateX(-50%);
+}
+.btn-panel {
   display: flex;
   column-gap: 1rem;
 }
