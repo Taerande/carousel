@@ -68,7 +68,7 @@ export default class Carousel {
     if (!this.currentImage) {
       this.currentImage = this.images.head;
     } else {
-      this.currentImage = this.currentImage.next;
+      this.currentImage = this.currentImage.prev;
     }
 
     return this.currentImage;

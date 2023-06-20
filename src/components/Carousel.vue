@@ -40,8 +40,8 @@ export default {
       this.currentImageUrl = nextImage.url;
     },
     prevImage() {
-      const nextImage = this.carousel.prevImage();
-      this.currentImageUrl = nextImage.url;
+      const prevImage = this.carousel.prevImage();
+      this.currentImageUrl = prevImage.url;
     },
   },
   mounted() {
